@@ -1,0 +1,8 @@
+h1 {
+    font-size: 40pt;
+    font-family: "Roboto Condensed";
+}
+
+#map {
+    height: 600px;
+}
