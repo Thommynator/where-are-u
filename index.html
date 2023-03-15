@@ -53,7 +53,8 @@
     map.on('click', onMapClick)
 
     function fetchSheetData() {
-        fetch("https://docs.google.com/spreadsheets/d/1eHi7YMixNCvonMtT6MY9qhFr4jxx5mqB5YOpcWh5UUg/edit#gid=0")
+        let spreadsheetId = '1eHi7YMixNCvonMtT6MY9qhFr4jxx5mqB5YOpcWh5UUg';
+        fetch("https://docs.google.com/spreadsheets/d/"+spreadsheetId+"/gviz/tq?tqx=out:json")
         .then(response => response.json())
         .then(data => {
             data.forEach(row => {
