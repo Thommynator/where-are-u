@@ -1,5 +1,30 @@
+body {
+    background-color: #262a59;
+    padding: 0 50px 20px;
+}
+
 h1 {
-    font-size: 40pt;
+    font-size: 50pt;
+    font-family: "Roboto Condensed";
+    color: #96FFFF;
+}
+
+.marker-button {
+    font-size: 18pt;
+    font-family: "Roboto Condensed";
+    background-color: #96FFFF;
+    border: none;
+    color: #96FFFF;
+    padding: 5px 20px;
+    margin-bottom: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.marker-button #plus {
+    color: #262a59;
+    font-size: 30pt;
     font-family: "Roboto Condensed";
 }
 
