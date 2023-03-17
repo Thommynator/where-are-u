@@ -22,6 +22,11 @@ h1 {
     display: inline-block;
 }
 
+.marker-button:hover {
+    background-color: #59EFFC;
+
+}
+
 .marker-button #plus {
     color: #262a59;
     font-size: 30pt;
