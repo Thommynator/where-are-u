@@ -5,7 +5,7 @@ This project uses a Google sheet table and a Leaflet map to visualize a county h
 The table just contains the county name and a counter (integer) for each county.
 The map shows the county boundaries and its color is based on the counter value. The higher the counter, the darker the color.
 <img src="./imgs/map.png" alt="map image">
-
+[Demo](https://thommynator.github.io/where-are-u/)
 
 ## How to use
 Create a Google sheet table with the following columns:
