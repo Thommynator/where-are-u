@@ -26,7 +26,7 @@ async function createCountryLayers() {
         .then(data => {
                 L.geoJSON(data, {
                     onEachFeature: function (feature, featureLayer) {
-                        featureLayer.bindPopup(feature.properties.ADMIN + " (" + getCountryCount(feature, sheetData) + "x)");
+                        featureLayer.bindPopup(getCountryName(feature) + " (" + getCountryCount(feature, sheetData) + "x)");
                     },
                     style: function (feature) {
                         return {
@@ -47,18 +47,22 @@ async function loadSheetDataAsMap() {
         .then(response => response.json())
         .then(data => {
             data.forEach(row => {
-                sheetData.set(row["Country"], row["Count"]);
+                sheetData.set(row[countryColumn], row[counterColumn]);
             })
         })
     return sheetData;
 }
 
+function getCountryName(countryFeature) {
+    return countryFeature.properties.ADMIN;
+}
+
 function getCountryCount(countryFeature, sheetData) {
-    return sheetData.get(countryFeature.properties.ADMIN) ?? 0;
+    return sheetData.get(getCountryName(countryFeature)) ?? 0;
 }
 
 function getCountryColor(countryFeature, sheetData, maxCount) {
-    let count = sheetData.get(countryFeature.properties.ADMIN);
+    let count = sheetData.get(getCountryName(countryFeature));
     if (count === undefined) {
         return 'rgba(255,254,230,0.3)';
     }
