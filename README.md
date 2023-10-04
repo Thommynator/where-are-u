@@ -4,7 +4,7 @@
 This project uses a Google sheet table and a Leaflet map to visualize a county heatmap.
 The table just contains the county name and a counter (integer) for each county.
 The map shows the county boundaries and its color is based on the counter value. The higher the counter, the darker the color.
-<img src="./imgs/map.png" alt="table-name image">
+<img src="./imgs/map.png" alt="map image">
 
 
 ## How to use
